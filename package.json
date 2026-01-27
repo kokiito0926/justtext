@@ -1,6 +1,6 @@
 {
 	"name": "@kokiito0926/justtext",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"private": false,
 	"description": "ジャストテキスト（justtext）を用いると、HTMLからテキストを抽出することができます。",
 	"keywords": [
