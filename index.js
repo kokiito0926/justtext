@@ -35,7 +35,7 @@ import { JSDOM } from "jsdom";
 import { Readability } from "@mozilla/readability";
 
 if (process.stdin.isTTY) {
-	console.error("Error: HTML is not piped to stdin.");
+	// console.error("Error: HTML is not piped to stdin.");
 	process.exit(1);
 }
 
