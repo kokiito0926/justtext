@@ -1,0 +1,41 @@
+{
+	"name": "@kokiito0926/justtext",
+	"version": "0.0.6",
+	"private": false,
+	"description": "ジャストテキスト（justtext）を用いると、HTMLからテキストを抽出することができます。",
+	"keywords": [
+		"cli",
+		"bash",
+		"shell",
+		"script",
+		"nodejs",
+		"justtext",
+		"readability"
+	],
+	"homepage": "https://github.com/kokiito0926/justtext#readme",
+	"publishConfig": {
+		"access": "public"
+	},
+	"bin": {
+		"justtext": "index.js"
+	},
+	"bugs": {
+		"url": "https://github.com/kokiito0926/justtext/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kokiito0926/justtext.git"
+	},
+	"license": "MIT",
+	"author": "Koki Ito <kokiito0926@gmail.com>",
+	"type": "module",
+	"scripts": {
+		"test": "node --test"
+	},
+	"dependencies": {
+		"zx": "^8.8.4"
+	},
+	"engines": {
+		"node": ">=24.0.0"
+	}
+}
