@@ -1,7 +1,7 @@
-## ジャストテキスト（justtext）
+## justtext
 
-ジャストテキスト（justtext）を用いると、HTMLからテキストを抽出することができます。  
-ウェブサイトをクロールしたあとに、そのHTMLからテキストを抽出して、大規模言語モデルに与えるようなときに便利かもしれません。
+justtextは、HTMLから記事本文や主要なテキストのみを抽出するコマンドラインのツールです。  
+ウェブサイトをクロールしたあとに、そのHTMLから記事本文や主要なテキストのみを抽出すると、大規模言語モデルに与えやすくなります。
 
 ## インストール
 
@@ -9,11 +9,12 @@
 $ npm install --global @kokiito0926/justtext
 ```
 
-## 実行方法
+## 使用方法
+
+curlなどで取得したHTMLをパイプでjusttextに流し込みます。
 
 ```bash
 $ curl -sSL https://example.com/ | justtext
-$ curl -sSL https://kokiito.com/ | justtext
 ```
 
 ## ライセンス

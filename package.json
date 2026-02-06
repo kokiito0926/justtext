@@ -2,7 +2,7 @@
 	"name": "@kokiito0926/justtext",
 	"version": "0.0.1",
 	"private": false,
-	"description": "ジャストテキスト（justtext）を用いると、HTMLからテキストを抽出することができます。",
+	"description": "HTMLから記事本文や主要なテキストのみを抽出するコマンドラインのツールです。",
 	"keywords": [
 		"cli",
 		"bash",
