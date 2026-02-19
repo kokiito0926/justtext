@@ -27,6 +27,9 @@ if (process.stdin.isTTY) {
 }
 
 const html = await stdin();
+if (!html) {
+	process.exit(1);
+}
 
 const dom = new JSDOM(html);
 
