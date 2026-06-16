@@ -6,6 +6,10 @@ justtextは、HTMLから記事本文や主要なテキストのみを抽出す�
 ## インストール
 
 ```bash
+$ npm install --save @kokiito0926/justtext
+```
+
+```bash
 $ npm install --global @kokiito0926/justtext
 ```
 
@@ -15,6 +19,15 @@ curlなどで取得したHTMLをパイプでjusttextに流し込みます。
 
 ```bash
 $ curl -sSL https://example.com/ | justtext
+```
+
+```javascript
+import { justtext } from "@kokiito0926/justtext";
+
+const fo = await fetch("https://example.com/");
+const html = await fo.text();
+const text = justtext(html);
+console.log(text);
 ```
 
 ## ライセンス
