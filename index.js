@@ -27,6 +27,7 @@ stdin is not a tty
 // >> 2026/01/26 18:27.
 
 import { stdin } from "zx";
+import { justtext } from "./lib.js";
 import sanitizeHtml from "sanitize-html";
 import { JSDOM, VirtualConsole } from "jsdom";
 import { Readability } from "@mozilla/readability";
@@ -40,34 +41,9 @@ if (!html) {
 	process.exit(1);
 }
 
-const cleanHtml = sanitizeHtml(html, {
-	nonTextTags: ["style", "script", "noscript"],
-});
-
-const virtualConsole = new VirtualConsole();
-virtualConsole.on("error", () => {});
-virtualConsole.on("warn", () => {});
-
-const dom = new JSDOM(cleanHtml, {
-	pretendToBeVisual: false,
-	resources: "usable",
-	runScripts: "outside-only",
-
-	features: {
-		FetchExternalResources: false,
-		ProcessExternalresources: false,
-	},
-
-	virtualConsole: virtualConsole,
-});
-
-const reader = new Readability(dom.window.document, {
-	keepClasses: true,
-});
-
-const article = reader.parse();
-if (!article) {
+const text = justtext(html);
+if (text === null) {
 	process.exit(1);
 }
 
-console.log(article?.textContent);
+console.log(text);
