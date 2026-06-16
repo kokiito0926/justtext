@@ -1,6 +1,6 @@
 {
 	"name": "@kokiito0926/justtext",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"private": false,
 	"description": "HTMLから記事本文や主要なテキストのみを抽出するコマンドラインのツールです。",
 	"keywords": [
