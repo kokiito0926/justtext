@@ -21,6 +21,8 @@ curlなどで取得したHTMLをパイプでjusttextに流し込みます。
 $ curl -sSL https://example.com/ | justtext
 ```
 
+ライブラリとして使用することもできます。
+
 ```javascript
 import { justtext } from "@kokiito0926/justtext";
 
